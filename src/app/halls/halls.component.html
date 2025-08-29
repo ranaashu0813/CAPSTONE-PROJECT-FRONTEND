@@ -1,0 +1,12 @@
+<section>
+  <h2>Halls</h2>
+  <ul>
+    <li *ngFor="let h of halls">
+      {{h.name}} ({{h.location}})
+      <button (click)="delete(h.id)">Delete</button>
+    </li>
+  </ul>
+  <input [(ngModel)]="name" placeholder="Hall Name">
+  <input [(ngModel)]="location" placeholder="Location">
+  <button (click)="add()">Add Hall</button>
+</section>

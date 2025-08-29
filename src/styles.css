@@ -1,0 +1,100 @@
+body { font-family: Arial, sans-serif; margin: 20px; }
+h1 { color: #333; }
+nav a { margin-right: 12px; }
+nav button { margin-left: 12px; }
+section, .card { background: #fff; padding: 12px; border: 1px solid #ccc; border-radius: 6px; margin-bottom: 16px; }
+input { margin: 4px; padding: 6px; }
+button { padding: 6px 10px; margin: 4px; }
+
+/* ===== LOGO ANIMATION ===== */
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff4081;
+  text-align: center;
+  display: block;
+  margin-bottom: 10px;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ff4081, 0 0 20px #ff80ab, 0 0 30px #f50057;
+  }
+  to {
+    text-shadow: 0 0 20px #f50057, 0 0 40px #ff4081, 0 0 60px #ff80ab;
+  }
+}
+
+/* ===== NAVBAR CONTAINER ===== */
+nav {
+  position: sticky;   /* <-- Keeps navbar fixed at top */
+  top: 0;
+  z-index: 1000;      /* <-- Ensures it stays above content */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+  background: linear-gradient(90deg, #ff4081, #f50057);
+  border-radius: 8px;
+  animation: slideIn 1s ease-out;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2); /* Small shadow effect */
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ===== COMMON LINK/BUTTON STYLES ===== */
+nav a,
+nav button {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Glow */
+nav a:hover,
+nav button:hover {
+  transform: scale(1.1);
+  color: yellow;
+  text-shadow: 0px 0px 10px yellow;
+}
+
+/* ===== INDIVIDUAL ITEM ANIMATIONS ===== */
+.Login {
+  animation: fadeIn 1s ease forwards;
+}
+.halls_nav {
+  animation: fadeIn 1.5s ease forwards;
+}
+.booking_nav {
+  animation: fadeIn 2s ease forwards;
+}
+.logout {
+  animation: fadeIn 2.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

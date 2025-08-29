@@ -1,0 +1,8 @@
+# Ignore dependencies
+node_modules/
+
+# Ignore Angular build files
+.angular/
+
+# Ignore environment files (optional)
+.env
